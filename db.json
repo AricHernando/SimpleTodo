@@ -1,37 +1,39 @@
-[
-    {
-        "id": 1,
-        "category": "Work",
-        "description": "Complete quarterly report"
-    },
-    {
-        "id": 2,
-        "category": "Personal",
-        "description": "Schedule dental appointment"
-    },
-    {
-        "id": 3,
-        "category": "Shopping",
-        "description": "Buy groceries for the week"
-    },
-    {
-        "id": 4,
-        "category": "Work",
-        "description": "Prepare presentation for client meeting"
-    },
-    {
-        "id": 5,
-        "category": "Home",
-        "description": "Fix leaking faucet in bathroom"
-    },
-    {
-        "id": 6,
-        "category": "Health",
-        "description": "Go for a 30-minute run"
-    },
-    {
-        "id": 7,
-        "category": "Personal",
-        "description": "Call mom for her birthday"
-    }
-]
+{
+    "todoList" : [
+        {
+            "id": 1,
+            "category": "Work",
+            "description": "Complete quarterly report"
+        },
+        {
+            "id": 2,
+            "category": "Personal",
+            "description": "Schedule dental appointment"
+        },
+        {
+            "id": 3,
+            "category": "Shopping",
+            "description": "Buy groceries for the week"
+        },
+        {
+            "id": 4,
+            "category": "Work",
+            "description": "Prepare presentation for client meeting"
+        },
+        {
+            "id": 5,
+            "category": "Home",
+            "description": "Fix leaking faucet in bathroom"
+        },
+        {
+            "id": 6,
+            "category": "Health",
+            "description": "Go for a 30-minute run"
+        },
+        {
+            "id": 7,
+            "category": "Personal",
+            "description": "Call mom for her birthday"
+        }
+    ]
+}
