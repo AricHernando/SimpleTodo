@@ -24,16 +24,6 @@
             "id": 5,
             "category": "Home",
             "description": "Fix leaking faucet in bathroom"
-        },
-        {
-            "id": 6,
-            "category": "Health",
-            "description": "Go for a 30-minute run"
-        },
-        {
-            "id": 7,
-            "category": "Personal",
-            "description": "Call mom for her birthday"
         }
     ]
 }
