@@ -39,11 +39,6 @@
             "description": "Complete quarterly report"
         },
         {
-            "id": 2,
-            "category": "Personal",
-            "description": "Schedule dental appointment"
-        },
-        {
             "id": 3,
             "category": "Shopping",
             "description": "Buy groceries for the week"

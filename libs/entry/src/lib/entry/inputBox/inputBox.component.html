@@ -1,2 +1,16 @@
 <p>Input box: </p>
-<input type="text" [(ngModel)]="newTodo"  (keyup.enter)="addEntry()">
+<form [formGroup]="newEntry">
+    <input type="text" formControlName="description">
+    <div>
+        <label>
+            <input type="radio" formControlName="category" value="Work"> Work
+        </label>
+        <label>
+            <input type="radio" formControlName="category" value="Shopping"> Shopping
+        </label>
+        <label>
+            <input type="radio" formControlName="category" value="Home"> Home
+        </label>
+    </div>
+    <button (click)="addEntry()">Add new</button>
+</form>

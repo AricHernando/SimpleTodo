@@ -1,7 +1,5 @@
 import { Component, inject, Input, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { BehaviorSubject, Observable, switchMap } from 'rxjs';
-import { ActivatedRoute } from '@angular/router';
 import { HttpClient, HttpHandler } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 
