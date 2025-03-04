@@ -1,13 +1,14 @@
 import { Component, inject, OnInit, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { BehaviorSubject, Observable, switchMap } from 'rxjs';
+import { BehaviorSubject, filter, Observable, switchMap } from 'rxjs';
 import { ActivatedRoute } from '@angular/router';
 import { EntryService } from './entry.service';
-import { HttpClient, HttpHandler } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { InputBoxComponent } from './inputBox/inputBox.component';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { SingleEntryComponent } from './single-entry/single-entry.component';
 import { Category, Entry } from './entry.util';
+
 @Component({
   selector: 'lib-entry',
   imports: [CommonModule, ReactiveFormsModule, InputBoxComponent, SingleEntryComponent],
@@ -17,8 +18,6 @@ import { Category, Entry } from './entry.util';
 })
 
 export class EntryComponent implements OnInit {
-  @ViewChild(InputBoxComponent) inputBoxComponent!: InputBoxComponent;
-
   private readonly route = inject(ActivatedRoute);
   private readonly queryParam$ = new BehaviorSubject(Category.all);
   
@@ -45,12 +44,9 @@ export class EntryComponent implements OnInit {
         this.entries = entries as Entry[];
       }
     );
-  }
-  
-  ngAfterViewInit() {
-    this.inputBoxComponent.entry$.subscribe(entry => {
-      this.entries.push(entry);
-      console.log('New entry:', entry);
-    });
+
+    this.service.entry$.subscribe(entry => {
+      console.log(entry)
+    })
   }
 }
