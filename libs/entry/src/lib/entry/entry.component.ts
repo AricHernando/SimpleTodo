@@ -5,7 +5,7 @@ import { ActivatedRoute } from '@angular/router';
 import { EntryService } from './entry.service';
 import { HttpClient } from '@angular/common/http';
 import { InputBoxComponent } from './inputBox/inputBox.component';
-import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { SingleEntryComponent } from './single-entry/single-entry.component';
 import { Category, Entry } from './entry.util';
 
@@ -27,8 +27,8 @@ export class EntryComponent implements OnInit {
   service = inject(EntryService);
 
   newEntry = new FormGroup({
-    description: new FormControl(''),
-    category: new FormControl(Category.all)
+    description: new FormControl('', Validators.required),
+    category: new FormControl<Category | null>(null, Validators.required)
   });
 
   ngOnInit(): void {

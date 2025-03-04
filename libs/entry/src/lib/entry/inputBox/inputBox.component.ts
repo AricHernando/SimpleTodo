@@ -2,7 +2,6 @@ import { CommonModule } from "@angular/common";
 import { Component, EventEmitter, Inject, inject, Input, input, OnInit, Output } from "@angular/core";
 import { FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from "@angular/forms";
 import { Category, Entry } from "../entry.util";
-import { Subject } from "rxjs";
 import { EntryService } from "../entry.service";
 
 @Component({
@@ -15,18 +14,18 @@ import { EntryService } from "../entry.service";
 
 export class InputBoxComponent {
   @Input() newEntry = new FormGroup({
-    description: new FormControl('', [Validators.required]),
-    category: new FormControl(Category.all, [Validators.required])
+    description: new FormControl(''),
+    category: new FormControl<Category | null>(null)
   });
   
-  service = inject(EntryService);
+  entryService = inject(EntryService);
 
   addEntry() {
-    if (!this.newEntry.valid) return;
+    if (!this.newEntry.valid && this.newEntry.value !== null) return;
     const entry: Entry = {
       id: 1,
       ...this.newEntry.value as {description: string, category: Category}
     }
-    this.service.addEntry(entry);
+    this.entryService.addEntry(entry);
   }
 }

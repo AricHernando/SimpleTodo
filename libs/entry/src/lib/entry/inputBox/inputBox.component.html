@@ -12,5 +12,6 @@
             <input type="radio" formControlName="category" value="Home"> Home
         </label>
     </div>
-    <button (click)="addEntry()">Add new</button>
+    <button type="submit" [disabled]="!newEntry.valid" (click)="addEntry()">Add new</button>
+
 </form>
