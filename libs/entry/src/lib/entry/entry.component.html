@@ -1,2 +1,4 @@
-<p>Entry works! Query Param is : {{category}}</p>
-
+<div id="entries">   
+    <single-entry *ngFor="let i of entries" [description]="i.description" [category]="category"></single-entry>
+    <input-box></input-box>
+</div>

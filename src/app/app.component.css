@@ -1,0 +1,13 @@
+#nav {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+li {
+    font-size: x-large;
+    padding: 2px;
+}
+
+#layout {
+    min-height: 100vh;
+}

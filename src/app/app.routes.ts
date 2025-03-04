@@ -2,7 +2,7 @@ import { Route } from '@angular/router';
 
 export const appRoutes: Route[] = [
     {
-        path: '',
+        path: 'rxjs',
         loadChildren: () => import('@todo/entry').then(({ EntryRoutes }) => EntryRoutes)
     },
 ];

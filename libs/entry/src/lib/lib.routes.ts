@@ -5,6 +5,9 @@ export const EntryRoutes: Route[] = [
     {
         path: ':category',
         component: EntryComponent,
-        
+    },
+    {
+        path: '',
+        component: EntryComponent,
     },
 ];

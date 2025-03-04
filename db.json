@@ -2,28 +2,33 @@
     "Work": [
         {
             "id": 1,
+            "category": "Work",
             "description": "Complete quarterly report"
         },
         {
             "id": 4,
+            "category": "Work",
             "description": "Prepare presentation for client meeting"
         }
     ],
     "Personal": [
         {
             "id": 2,
+            "category": "Personal",
             "description": "Schedule dental appointment"
         }
     ],
     "Shopping": [
         {
             "id": 3,
+            "category": "Shopping",
             "description": "Buy groceries for the week"
         }
     ],
     "Home": [
         {
             "id": 5,
+            "category": "Home",
             "description": "Fix leaking faucet in bathroom"
         }
     ],

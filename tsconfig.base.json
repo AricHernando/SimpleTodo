@@ -15,7 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@todo/entry": ["libs/entry/src/index.ts"]
+      "@todo/entry": ["libs/entry/src/index.ts"],
+      "@todo/rxjs-entry": ["libs/rxjs-entry/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

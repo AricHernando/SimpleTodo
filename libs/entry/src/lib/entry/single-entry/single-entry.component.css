@@ -1,0 +1,20 @@
+#entry-rxjs { 
+    display: block;
+    margin: 0 auto;
+    max-width: 600px;
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.shopping {
+    background-color: yellow;
+}
+
+.work {
+    background-color: skyblue;
+}
+
+.home {
+    background-color: green;
+}
