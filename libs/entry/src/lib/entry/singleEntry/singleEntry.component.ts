@@ -13,5 +13,5 @@ import { Category, ShoppingListItems } from '../entry.util';
 export class SingleEntryComponent {
   @Input() description = ''
   @Input() category: Category = Category.all;
-  @Input() shoppingList?: ShoppingListItems;
+  @Input() shoppingList?: ShoppingListItems[];
 }

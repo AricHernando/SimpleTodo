@@ -13,7 +13,7 @@
         </label>
     </div>
     @if (showShopInput) {
-        <shop-input></shop-input>
+        <shop-input [shoppingListForm]="shoppingListForm"></shop-input>
     }
-    <button type="submit" [disabled]="!newEntry.valid" (click)="addEntry()">Add new</button>
+    <button type="submit" [disabled]="!newEntry.valid" (click)="onSubmit()">Add new entry</button>
 </form>

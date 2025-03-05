@@ -1,0 +1,9 @@
+@for (i of shoppingListForm.controls; track $index) {
+    <form [formGroup]="i" class="shop-input">
+        <label>Item </label>
+        <input formControlName="item" type="text">
+        <label>Quantity </label>
+        <input formControlName="quantity" type="number">
+    </form>
+}
+<button (click)="addNewInput()" (keyup.enter)="addNewInput()">Add more items</button>

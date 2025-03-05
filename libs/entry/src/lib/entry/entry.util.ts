@@ -14,5 +14,5 @@ export interface Entry {
     id: number;
     description: string;
     category: Category;
-    shoppingList?: ShoppingListItems;
+    shoppingList?: ShoppingListItems[];
 }

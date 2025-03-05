@@ -16,11 +16,11 @@
             "id": 3,
             "category": "shop",
             "description": "Buy groceries for the week",
-            "shoppingList" : {
-                "Onions": 2,
-                "Tomatoes": 4,
-                "Potatoes": 5
-            }
+            "shoppingList" : [
+                {"Onions": 2},
+                {"Tomatoes": 4},
+                {"Potatoes": 5}
+            ]
         }
     ],
     "Home": [

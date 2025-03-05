@@ -1,9 +1,9 @@
 import { CommonModule } from "@angular/common";
 import { Component, EventEmitter, Inject, inject, Input, input, OnInit, Output } from "@angular/core";
-import { FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from "@angular/forms";
-import { Category, Entry } from "../entry.util";
+import { FormArray, FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from "@angular/forms";
+import { Category, Entry, ShoppingListItems } from "../entry.util";
 import { EntryService } from "../entry.service";
-import { ShopInputComponent } from "./shopInput/shopInput.component";
+import { ShopInputComponent } from "./shopList/shopInput.component";
 
 @Component({
   selector: 'input-box',
@@ -15,12 +15,14 @@ import { ShopInputComponent } from "./shopInput/shopInput.component";
 export class InputBoxComponent {
   entryService = inject(EntryService);
 
-  descriptionForm = new FormControl('');
-  categoryForm = new FormControl<Category | null>(null);
+  descriptionForm = new FormControl('', Validators.required);
+  categoryForm = new FormControl<Category | null>(null, Validators.required);
+  shoppingListForm = new FormArray<FormGroup>([]);
 
   @Input() newEntry = new FormGroup({
     description: this.descriptionForm,
-    category: this.categoryForm
+    category: this.categoryForm,
+    shoppingList: this.shoppingListForm
   });
   
   showShopInput = false;
@@ -30,13 +32,14 @@ export class InputBoxComponent {
       this.showShopInput = this.categoryForm.value === Category.shop;
     })
   }
-
-  addEntry() {
+  
+  onSubmit() {
     if (!this.newEntry.valid && this.newEntry.value !== null) return;
-    const entry: Entry = {
-      id: 1,
-      ...this.newEntry.value as {description: string, category: Category}
-    }
-    this.entryService.addEntry(entry);
+    console.log(this.newEntry.value);
+    // const entry: Entry = {
+    //   id: 1,
+    //   ...this.newEntry.value as {description: string, category: Category, shoppingList: ShoppingListItems}
+    // }
+    // this.entryService.addEntry(entry);
   }
 }
