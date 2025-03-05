@@ -1,4 +1,4 @@
-<p>Input box: </p>
+<p>Task name: </p>
 <form [formGroup]="newEntry">
     <input type="text" formControlName="description">
     <div>
@@ -12,6 +12,6 @@
             <input type="radio" formControlName="category" value="Home"> Home
         </label>
     </div>
+    <shop-input></shop-input>
     <button type="submit" [disabled]="!newEntry.valid" (click)="addEntry()">Add new</button>
-
 </form>

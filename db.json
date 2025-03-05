@@ -22,7 +22,12 @@
         {
             "id": 3,
             "category": "Shopping",
-            "description": "Buy groceries for the week"
+            "description": "Buy groceries for the week",
+            "shoppingList" : {
+                "Onions": 2,
+                "Tomatoes": 4,
+                "Potatoes": 5
+            }
         }
     ],
     "Home": [

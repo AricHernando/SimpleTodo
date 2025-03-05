@@ -3,13 +3,13 @@ import { Component, EventEmitter, Inject, inject, Input, input, OnInit, Output }
 import { FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from "@angular/forms";
 import { Category, Entry } from "../entry.util";
 import { EntryService } from "../entry.service";
+import { ShopInputComponent } from "./shopInput/shopInput.component";
 
 @Component({
   selector: 'input-box',
-  imports: [CommonModule, FormsModule, ReactiveFormsModule],
+  imports: [CommonModule, FormsModule, ReactiveFormsModule, ShopInputComponent],
   templateUrl: './inputBox.component.html',
   styleUrl: './inputBox.component.css',
-  providers: [EntryService]
 })
 
 export class InputBoxComponent {

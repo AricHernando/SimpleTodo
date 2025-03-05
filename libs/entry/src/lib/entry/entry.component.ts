@@ -6,7 +6,7 @@ import { EntryService } from './entry.service';
 import { HttpClient } from '@angular/common/http';
 import { InputBoxComponent } from './inputBox/inputBox.component';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { SingleEntryComponent } from './single-entry/single-entry.component';
+import { SingleEntryComponent } from './singleEntry/singleEntry.component';
 import { Category, Entry } from './entry.util';
 
 @Component({
@@ -14,7 +14,6 @@ import { Category, Entry } from './entry.util';
   imports: [CommonModule, ReactiveFormsModule, InputBoxComponent, SingleEntryComponent],
   templateUrl: './entry.component.html',
   styleUrl: './entry.component.css',
-  providers: [EntryService, HttpClient]
 })
 
 export class EntryComponent implements OnInit {
@@ -25,11 +24,6 @@ export class EntryComponent implements OnInit {
   entries: Entry[] = [];
   
   service = inject(EntryService);
-
-  newEntry = new FormGroup({
-    description: new FormControl('', Validators.required),
-    category: new FormControl<Category | null>(null, Validators.required)
-  });
 
   ngOnInit(): void {
     this.route.paramMap.pipe(
@@ -46,7 +40,8 @@ export class EntryComponent implements OnInit {
     );
 
     this.service.entry$.subscribe(entry => {
-      console.log(entry)
+      if(entry === null) return;
+      this.entries.push(entry);
     })
   }
 }

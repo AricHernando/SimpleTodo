@@ -19,6 +19,7 @@ export class EntryService {
     );
 
   public addEntry = (entry: Entry) => {
+    // POST Request
     this.entrySubject.next(entry);
   }
 }

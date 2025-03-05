@@ -1,0 +1,8 @@
+<div>
+    <div id="entry-rxjs" class="{{category}}">
+        {{description}}
+    </div>
+    @for (i of shoppingList; track $index) {
+        <div> {{i.items}} | <span> {{i.quantity}}</span></div>
+    }
+</div>
