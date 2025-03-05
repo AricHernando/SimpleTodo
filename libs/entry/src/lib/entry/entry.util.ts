@@ -7,7 +7,8 @@ export enum Category {
 }
 
 export interface ShoppingListItems {
-    [item: string]: number;
+    item: string
+    quantity: number;
 }
 
 export interface Entry {

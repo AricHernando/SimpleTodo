@@ -17,9 +17,18 @@
             "category": "shop",
             "description": "Buy groceries for the week",
             "shoppingList" : [
-                {"Onions": 2},
-                {"Tomatoes": 4},
-                {"Potatoes": 5}
+                {
+                    "item": "Onion",
+                    "quantity": 2
+                },
+                {
+                    "item": "Tomato",
+                    "quantity": 4
+                },
+                {
+                    "item": "Milk",
+                    "quantity": 5
+                }
             ]
         }
     ],

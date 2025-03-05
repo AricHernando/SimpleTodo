@@ -36,10 +36,12 @@ export class InputBoxComponent {
   onSubmit() {
     if (!this.newEntry.valid && this.newEntry.value !== null) return;
     console.log(this.newEntry.value);
-    // const entry: Entry = {
-    //   id: 1,
-    //   ...this.newEntry.value as {description: string, category: Category, shoppingList: ShoppingListItems}
-    // }
-    // this.entryService.addEntry(entry);
+    const entry: Entry = {
+      id: 1,
+      description: this.newEntry.value?.description || '',
+      category: this.newEntry.value?.category || Category.all,
+      shoppingList: this.newEntry.value?.shoppingList || []
+    }
+    this.entryService.addEntry(entry);
   }
 }
