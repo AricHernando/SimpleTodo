@@ -12,8 +12,8 @@
             <input type="radio" formControlName="category" value="home"> Home
         </label>
     </div>
-    @if (showShopInput) {
-        <shop-input [shoppingListForm]="shoppingListForm"></shop-input>
+    @if (showShoppingListForm()) {
+        <shop-list [shoppingListForm]="shoppingListForm"></shop-list>
     }
-    <button type="submit" [disabled]="!newEntry.valid" (click)="onSubmit()">Add new entry</button>
+    <ion-button type="submit" [disabled]="!newEntry.valid" (click)="onSubmit()">Add new entry</ion-button>
 </form>

@@ -1,18 +1,19 @@
-import { Component, inject, Input, OnInit } from '@angular/core';
+import { Component, computed, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormArray, FormBuilder, FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { IonCard, IonCardContent, IonCardHeader, IonCardSubtitle, IonCardTitle } from '@ionic/angular/standalone';
 
 @Component({
-  selector: 'shop-input',
+  selector: 'shop-list',
   imports: [CommonModule, ReactiveFormsModule],
-  templateUrl: './shopInput.component.html',
-  styleUrl: './shopInput.component.css',
-  providers: [FormBuilder]
+  templateUrl: './shopList.component.html',
+  styleUrl: './shopList.component.css',
+  providers: [FormBuilder, IonCard]
 })
 
-export class ShopInputComponent {
+export class ShopListComponent {
   @Input() shoppingListForm: FormArray<FormGroup> = new FormArray<FormGroup>([]);
-
+  
   addNewInput() {
     this.shoppingListForm.push(this.createShoppingListControls());
   }

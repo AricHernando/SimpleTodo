@@ -1,10 +1,10 @@
-<div>
-    <div id="entry-rxjs" [ngClass]="category">
-        {{description}}
-        @if (shoppingList !== undefined) {
-            @for (i of shoppingList; track $index) {
-                <div> {{i.item}} | <span> {{i.quantity}}</span></div>
-            }
+<ion-card>
+    <ion-card-header>
+        <ion-card-title>{{description}}</ion-card-title>
+    </ion-card-header>
+    @if (shoppingList !== undefined) {
+        @for (i of shoppingList; track $index) {
+            <ion-card-content> {{i.item}} | <span> {{i.quantity}}</span></ion-card-content>
         }
-    </div>
-</div>
+    }    
+</ion-card>
