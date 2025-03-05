@@ -2,26 +2,19 @@
     "Work": [
         {
             "id": 1,
-            "category": "Work",
+            "category": "work",
             "description": "Complete quarterly report"
         },
         {
             "id": 4,
-            "category": "Work",
+            "category": "work",
             "description": "Prepare presentation for client meeting"
-        }
-    ],
-    "Personal": [
-        {
-            "id": 2,
-            "category": "Personal",
-            "description": "Schedule dental appointment"
         }
     ],
     "Shopping": [
         {
             "id": 3,
-            "category": "Shopping",
+            "category": "shop",
             "description": "Buy groceries for the week",
             "shoppingList" : {
                 "Onions": 2,
@@ -33,29 +26,29 @@
     "Home": [
         {
             "id": 5,
-            "category": "Home",
+            "category": "home",
             "description": "Fix leaking faucet in bathroom"
         }
     ],
     "all" : [
         {
             "id": 1,
-            "category": "Work",
+            "category": "work",
             "description": "Complete quarterly report"
         },
         {
             "id": 3,
-            "category": "Shopping",
+            "category": "shop",
             "description": "Buy groceries for the week"
         },
         {
             "id": 4,
-            "category": "Work",
+            "category": "work",
             "description": "Prepare presentation for client meeting"
         },
         {
             "id": 5,
-            "category": "Home",
+            "category": "home",
             "description": "Fix leaking faucet in bathroom"
         }
     ]

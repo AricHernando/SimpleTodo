@@ -1,8 +1,10 @@
 <div>
-    <div id="entry-rxjs" class="{{category}}">
+    <div id="entry-rxjs" [ngClass]="category">
         {{description}}
+        @if (shoppingList !== undefined) {
+            @for (i of shoppingList | keyvalue; track $index) {
+                <div> {{i.key}} | <span> {{i.value}}</span></div>
+            }
+        }
     </div>
-    @for (i of shoppingList; track $index) {
-        <div> {{i.items}} | <span> {{i.quantity}}</span></div>
-    }
 </div>

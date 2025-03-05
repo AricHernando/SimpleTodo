@@ -13,5 +13,4 @@ import { FormBuilder, ReactiveFormsModule } from '@angular/forms';
 
 export class ShopInputComponent {
   shoppingList: string[] = [];   
-   
 }

@@ -13,12 +13,23 @@ import { ShopInputComponent } from "./shopInput/shopInput.component";
 })
 
 export class InputBoxComponent {
+  entryService = inject(EntryService);
+
+  descriptionForm = new FormControl('');
+  categoryForm = new FormControl<Category | null>(null);
+
   @Input() newEntry = new FormGroup({
-    description: new FormControl(''),
-    category: new FormControl<Category | null>(null)
+    description: this.descriptionForm,
+    category: this.categoryForm
   });
   
-  entryService = inject(EntryService);
+  showShopInput = false;
+
+  ngOnInit() {
+    this.categoryForm.valueChanges.subscribe(() => {
+      this.showShopInput = this.categoryForm.value === Category.shop;
+    })
+  }
 
   addEntry() {
     if (!this.newEntry.valid && this.newEntry.value !== null) return;

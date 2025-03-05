@@ -1,8 +1,7 @@
 import { Component, inject, Input, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HttpClient, HttpHandler } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
-import { ShopItem } from '../entry.util';
+import { Category, ShoppingListItems } from '../entry.util';
 
 @Component({
   selector: 'single-entry',
@@ -13,6 +12,6 @@ import { ShopItem } from '../entry.util';
 
 export class SingleEntryComponent {
   @Input() description = ''
-  @Input() category = ''
-  @Input() shoppingList: ShopItem[] = []
+  @Input() category: Category = Category.all;
+  @Input() shoppingList?: ShoppingListItems;
 }
