@@ -6,4 +6,4 @@ export const HomepageRoutes: Route[] = [
         path: '',
         component: HomepageComponent,
     },
-];
+]
