@@ -1,19 +1,14 @@
-<p>Task name: </p>
 <form [formGroup]="newEntry">
-    <input type="text" formControlName="description">
-    <div>
-        <label>
-            <input type="radio" formControlName="category" value="work"> Work
-        </label>
-        <label>
-            <input type="radio" formControlName="category" value="shop"> Shopping
-        </label>
-        <label>
-            <input type="radio" formControlName="category" value="home"> Home
-        </label>
-    </div>
+    <ion-input label="Description" formControlName="description"></ion-input>
+    <ion-radio-group formControlName="category">
+        <ion-radio value="work">Work</ion-radio> <br/>
+        <ion-radio value="shop">Shop</ion-radio> <br/>
+        <ion-radio value="home">Home</ion-radio> <br/>
+    </ion-radio-group>
+
     @if (showShoppingListForm()) {
         <shop-list [shoppingListForm]="shoppingListForm"></shop-list>
     }
+
     <ion-button type="submit" [disabled]="!newEntry.valid" (click)="onSubmit()">Add new entry</ion-button>
 </form>

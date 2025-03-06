@@ -1,6 +1,6 @@
-<div id="entries">   
+<ion-grid id="entries">
     @for (i of entries; track $index) {
         <single-entry [description]="i.description" [category]="i.category" [shoppingList]="i.shoppingList"></single-entry>
     }
-    <input-box></input-box>
-</div>
+</ion-grid>
+<input-box></input-box>

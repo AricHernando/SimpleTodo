@@ -4,11 +4,11 @@ import { FormArray, FormControl, FormGroup, FormsModule, ReactiveFormsModule, Va
 import { Category, Entry } from "../entry.util";
 import { EntryService } from "../entry.service";
 import { ShopListComponent } from "./shopList/shopList.component";
-import { IonButton } from "@ionic/angular/standalone";
+import { IonButton, IonInput, IonRadio, IonRadioGroup } from "@ionic/angular/standalone";
 
 @Component({
   selector: 'input-box',
-  imports: [CommonModule, FormsModule, ReactiveFormsModule, ShopListComponent, IonButton],
+  imports: [CommonModule, FormsModule, ReactiveFormsModule, ShopListComponent, IonButton, IonRadio, IonRadioGroup, IonInput],
   templateUrl: './inputBox.component.html',
   styleUrl: './inputBox.component.css',
 })
@@ -26,8 +26,7 @@ export class InputBoxComponent {
 
   ngOnInit() {
     this.categoryForm.valueChanges.subscribe(value => {
-      console.log(this.categoryForm.value)
-      this.categorySignal.set(this.categoryForm.value)
+      this.categorySignal.set(value);
     });  
   }
   

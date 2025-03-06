@@ -16,6 +16,7 @@
     "baseUrl": ".",
     "paths": {
       "@todo/entry": ["libs/entry/src/index.ts"],
+      "@todo/homepage": ["libs/homepage/src/index.ts"],
       "@todo/rxjs-entry": ["libs/rxjs-entry/src/index.ts"]
     }
   },

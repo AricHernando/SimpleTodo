@@ -1,14 +1,14 @@
 import { Component, computed, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormArray, FormBuilder, FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { IonCard, IonCardContent, IonCardHeader, IonCardSubtitle, IonCardTitle } from '@ionic/angular/standalone';
+import { IonButton, IonCard, IonItem, IonLabel, IonList } from '@ionic/angular/standalone';
 
 @Component({
   selector: 'shop-list',
-  imports: [CommonModule, ReactiveFormsModule],
+  imports: [CommonModule, ReactiveFormsModule, IonButton, IonLabel, IonList, IonItem],
   templateUrl: './shopList.component.html',
   styleUrl: './shopList.component.css',
-  providers: [FormBuilder, IonCard]
+  providers: [FormBuilder]
 })
 
 export class ShopListComponent {

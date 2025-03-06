@@ -2,11 +2,11 @@ import { Component, inject, Input, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
 import { Category, ShoppingListItems } from '../entry.util';
-import { IonCard, IonCardContent, IonCardHeader, IonCardTitle } from '@ionic/angular/standalone';
+import { IonCard, IonCardContent, IonCardHeader, IonCardTitle, IonCol, IonRow } from '@ionic/angular/standalone';
 
 @Component({
   selector: 'single-entry',
-  imports: [CommonModule, ReactiveFormsModule, IonCard, IonCardTitle, IonCardContent, IonCardHeader],
+  imports: [CommonModule, ReactiveFormsModule, IonCard, IonCardTitle, IonCardContent, IonCardHeader, IonCol],
   templateUrl: './singleEntry.component.html',
   styleUrl: './singleEntry.component.css',
 })

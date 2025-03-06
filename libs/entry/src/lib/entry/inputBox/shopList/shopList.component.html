@@ -1,9 +1,15 @@
 @for (i of shoppingListForm.controls; track $index) {
     <form [formGroup]="i" class="shop-input">
-        <label>Item </label>
-        <input formControlName="item" type="text">
-        <label>Quantity </label>
-        <input formControlName="quantity" type="number">
+        <ion-list>
+            <ion-item class="ion-item">
+                <ion-label>Item </ion-label>
+                <ion-input formControlName="item" type="text" ngDefaultControl></ion-input>
+            </ion-item>
+            <ion-item class="ion-item">
+                <ion-label>Quantity </ion-label>
+                <ion-input formControlName="quantity" type="number" ngDefaultControl></ion-input>
+            </ion-item>
+        </ion-list>
     </form>
 }
-<button (click)="addNewInput()" (keyup.enter)="addNewInput()">Add more items</button>
+<ion-button (click)="addNewInput()">Add more items</ion-button>
