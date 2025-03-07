@@ -1,13 +1,13 @@
 <ion-col>
     <ion-card>
         <ion-card-header>
-            <ion-card-title>{{description}}</ion-card-title>
+            <ion-card-title>{{entry?.title}}</ion-card-title>
         </ion-card-header>
-        @if (shoppingList !== undefined) {
-            @for (i of shoppingList; track $index) {
+        @if (entry?.shoppingList !== undefined) {
+            @for (i of entry?.shoppingList; track $index) {
                 <ion-card-content> {{i.item}} | <span> {{i.quantity}}</span></ion-card-content>
             }
-        }    
-        <ion-button fill="clear">Details</ion-button>
+        }
+        <ion-button [routerLink]="['entry/detail/', entry?.id]" fill="clear">Details</ion-button>
     </ion-card>
 </ion-col>

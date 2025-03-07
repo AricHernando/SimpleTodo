@@ -6,7 +6,7 @@ export const appRoutes: Route[] = [
         loadChildren: () => import('@todo/homepage').then(({ HomepageRoutes }) => HomepageRoutes)
     },
     {
-        path: '',
+        path: 'entry',
         loadChildren: () => import('@todo/entry').then(({ EntryRoutes }) => EntryRoutes)
-    },
+    }
 ];

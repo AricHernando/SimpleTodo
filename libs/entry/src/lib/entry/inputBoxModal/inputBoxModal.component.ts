@@ -54,6 +54,7 @@ export class InputBoxModalComponent {
       category: this.newEntry.value?.category || Category.all,
       shoppingList: this.newEntry.value?.shoppingList || []
     }
+    
     this.entryService.addEntry(entry);
     this.modalCtrl.dismiss();
   }

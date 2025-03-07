@@ -8,6 +8,8 @@ import { Category, Entry } from './entry.util';
 
 export class EntryService {
   private entriesSubject: BehaviorSubject<Entry[]> = new BehaviorSubject<Entry[]>([]);
+  private fakeId = 0;
+
   public entries$: Observable<Entry[]> = this.entriesSubject.asObservable();
 
   public getEntriesByCategory = (category: Category = Category.all) => {
@@ -21,14 +23,12 @@ export class EntryService {
   public getEntriesById = (id: number) => {
     return of(this.entriesSubject.value).pipe(
       mergeAll(),
-      filter(entry => entry.id === id),
-      first()
+      first(entry => entry.id === id),
     );
   }
 
   public addEntry = (entry: Entry) => {
+    entry.id = this.fakeId++;
     this.entriesSubject.next([...this.entriesSubject.value, entry]);
-    this.getEntriesById(1)
   }
-  // Ionic routing, ngrx after > amplify
 }

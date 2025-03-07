@@ -12,7 +12,7 @@ import { add } from 'ionicons/icons';
 
 @Component({
   selector: 'lib-entry',
-  imports: [CommonModule, ReactiveFormsModule, IonFab, IonRow, IonCol, IonText, IonIcon, IonFabButton, InputBoxModalComponent, SingleEntryComponent, IonGrid],
+  imports: [CommonModule, ReactiveFormsModule, IonFab, IonRow, IonCol, IonText, IonIcon, IonFabButton, SingleEntryComponent, IonGrid],
   templateUrl: './entry.component.html',
   styleUrl: './entry.component.css',
 })
@@ -51,8 +51,6 @@ export class EntryComponent implements OnInit {
     });
     modal.present();
 
-    const { data, role } = await modal.onWillDismiss();
-    
-    if (role === 'confirm') {}
+    await modal.onWillDismiss();
   }
 }

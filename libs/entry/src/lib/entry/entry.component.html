@@ -1,6 +1,6 @@
 <ion-grid id="entries">
     @for (i of entries; track $index) {
-        <single-entry [description]="i.description" [category]="i.category" [shoppingList]="i.shoppingList"></single-entry>
+        <single-entry [entry]="i"></single-entry>
     } @empty {
         <ion-row>
             <ion-col>
@@ -9,7 +9,7 @@
         </ion-row>
     }
 </ion-grid>
-<ion-fab  slot="fixed" vertical="bottom" horizontal="end">
+<ion-fab slot="fixed" vertical="bottom" horizontal="end">
     <ion-fab-button (click)="openModal()">
         <ion-icon name="add"></ion-icon>
     </ion-fab-button>

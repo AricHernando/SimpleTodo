@@ -1,13 +1,9 @@
 import { Route } from "@angular/router";
-import { EntryComponent } from "./entry/entry.component";
+import { EntryDetailComponent } from "./entry/entryDetail/entryDetail.component";
 
 export const EntryRoutes: Route[] = [
     {
-        path: ':category',
-        component: EntryComponent,
+        path: 'detail/:entryId',
+        component: EntryDetailComponent,
     },
-    {
-        path: '',
-        component: EntryComponent,
-    },
-];
+]
