@@ -1,56 +1,48 @@
 
 <ion-tabs>
     <ion-tab tab="categories">
-        <div id="categories-nav">
+        <ion-content id="categories-nav">
             <ion-nav id="categories-nav"></ion-nav>
             <ion-header>
                 <ion-toolbar>
                 <ion-title>Categories</ion-title>
                 </ion-toolbar>
             </ion-header>
-            <ion-content class="content">
-                <categories></categories>
-            </ion-content>
-        </div>
+        </ion-content>
     </ion-tab>
     <ion-tab tab="work">
-        <div id="work-nav">
-            <ion-nav id="work-nav"></ion-nav>            
-            <ion-header>
-                <ion-toolbar>
-                <ion-title>Work</ion-title>
-                </ion-toolbar>
-            </ion-header>
-            <ion-content class="content">
-                <lib-entry [category]="CategoryEnum.work"></lib-entry>
-            </ion-content>
-        </div>
+        <ion-nav id="work-nav"></ion-nav>            
+        <ion-header>
+            <ion-toolbar>
+            <ion-title>Work</ion-title>
+            </ion-toolbar>
+        </ion-header>
+        <ion-content class="ion-padding">
+            <lib-entry [category]="CategoryEnum.work"></lib-entry>
+        </ion-content>
     </ion-tab>
     <ion-tab tab="shop">
         <ion-nav id="shop-nav"></ion-nav>
-        <div id="shop-page">
-            <ion-header>
-                <ion-toolbar>
-                <ion-title>Shop</ion-title>
-                </ion-toolbar>
-            </ion-header>
-            <ion-content class="content">
-                <lib-entry [category]="CategoryEnum.shop"></lib-entry>
-            </ion-content>
-        </div>
+        <ion-header>
+            <ion-toolbar>
+            <ion-title>Shop</ion-title>
+            </ion-toolbar>
+        </ion-header>
+        <ion-content class="ion-padding">
+            <lib-entry [category]="CategoryEnum.shop"></lib-entry>
+        </ion-content>
     </ion-tab>
     <ion-tab tab="home">
         <ion-nav id="home-nav"></ion-nav>
-        <div id="home-page">
         <ion-header>
             <ion-toolbar>
             <ion-title>Home</ion-title>
             </ion-toolbar>
         </ion-header>
-        <ion-content class="content">
+        
+        <ion-content class="ion-padding">
             <lib-entry [category]="CategoryEnum.home"></lib-entry>
         </ion-content>
-        </div>
     </ion-tab>
 
     <ion-tab-bar slot="bottom">

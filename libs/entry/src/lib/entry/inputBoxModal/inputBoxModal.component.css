@@ -1,0 +1,9 @@
+.input-box { 
+    padding: 20px;
+    border: 1px solid black;   
+}
+
+.header-padding {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}

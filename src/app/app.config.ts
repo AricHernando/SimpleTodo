@@ -11,6 +11,6 @@ export const appConfig: ApplicationConfig = {
     provideIonicAngular({ mode: 'ios' }),
     provideZoneChangeDetection({ eventCoalescing: true }),
     provideRouter(appRoutes),
-    provideHttpClient(), provideIonicAngular({}),
+    provideHttpClient(),
   ],
 };

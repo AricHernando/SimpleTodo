@@ -6,7 +6,7 @@ import { logoIonic, homeOutline, businessOutline, compassOutline, bagHandleOutli
 
 @Component({
   selector: 'categories',
-  imports: [CommonModule, IonTab, IonNav, IonTabs, IonTabBar, IonIcon, IonBreadcrumbs, IonBreadcrumb, IonTabButton, IonIcon, IonMenu, IonNavLink, IonHeader, IonTitle, IonToolbar, IonContent, IonButtons, IonMenuButton, IonButton, IonItem, IonList],
+  imports: [CommonModule, IonContent],
   templateUrl: './categories.component.html',
   styleUrl: './categories.component.css',
 })

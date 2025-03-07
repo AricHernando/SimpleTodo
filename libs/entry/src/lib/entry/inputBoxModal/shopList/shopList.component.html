@@ -1,0 +1,21 @@
+@for (i of shoppingListForm.controls; track $index) {    
+    <form [formGroup]="i" class="">
+        @if($first) {
+            <ion-item color="primary">Shopping List</ion-item> 
+        }
+        <!-- TODO, ngDefault? any better options? -->
+        <ion-item class="ion-item">
+            <ion-label>
+                <ion-text color="medium">Item</ion-text>
+            </ion-label>
+            <ion-input formControlName="item" type="text" ngDefaultControl></ion-input>
+            <ion-label>
+                <ion-text color="medium">Quantity</ion-text>
+            </ion-label>
+            <ion-input formControlName="quantity" type="number" ngDefaultControl></ion-input>
+        </ion-item>
+    </form>
+}
+<ion-button shape="round" (click)="addNewInput()">        
+    <ion-icon name="add"></ion-icon>
+</ion-button>

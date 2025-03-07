@@ -13,6 +13,7 @@ export interface ShoppingListItems {
 
 export interface Entry {
     id: number;
+    title: string;
     description: string;
     category: Category;
     shoppingList?: ShoppingListItems[];

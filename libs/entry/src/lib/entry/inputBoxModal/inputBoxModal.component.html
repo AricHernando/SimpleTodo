@@ -1,0 +1,33 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-button color="medium" (click)="cancel()">Cancel</ion-button>
+      </ion-buttons>
+      <ion-title>Insert new entry</ion-title>
+      <ion-buttons slot="end">
+        <ion-button (click)="confirm()" [strong]="true">Confirm</ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+<ion-content class="">
+  <form [formGroup]="newEntry">
+    <ion-item>
+      <ion-input labelPlacement="floating" label="Title" formControlName="title"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-textarea rows="3" labelPlacement="floating" label="Description" formControlName="description"></ion-textarea>
+    </ion-item>
+    <ion-item class="radio-group">
+      <ion-radio-group formControlName="category">
+          <ion-label class="header-padding" >Category</ion-label>
+          <ion-radio labelPlacement="end" justify="start" value="work">Work</ion-radio> 
+          <ion-radio labelPlacement="end" justify="start" value="shop">Shop</ion-radio> 
+          <ion-radio labelPlacement="end" justify="start" value="home">Home</ion-radio> 
+      </ion-radio-group>
+    </ion-item>
+  
+  </form>
+  @if (showShoppingListForm()) {
+    <shop-list [shoppingListForm]="shoppingListForm"></shop-list>
+  }
+</ion-content>
